@@ -1,19 +1,16 @@
 //
-//  ViewController.swift
+//  RegistrationViewController.swift
 //  Efe's Quiz
 //
 //  Created by Efe on 14.04.2022.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
-
+class RegistrationViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.title = "Sign in"
     }
-
-
 }
-
