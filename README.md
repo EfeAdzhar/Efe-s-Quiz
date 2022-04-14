@@ -9,4 +9,4 @@
 ### By the way, I'm using `Navigation Controller` in Storyboard to make things more beautiful and smooth. And also use some `CAGradientLayer` to make buttons and views more pleasant for my eyes.
 
 #### Here's what `ViewController` or welcome screen looks like:
-[ViewController](../Downloads/ViewControllerForQuizApp.jpeg)
+[ViewController](./Photos/ViewControllerForQuizApp.jpeg)
