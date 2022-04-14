@@ -13,6 +13,7 @@
 		B415135828085F3200856F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B415135628085F3200856F14 /* Main.storyboard */; };
 		B415135A28085F3400856F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B415135928085F3400856F14 /* Assets.xcassets */; };
 		B415135D28085F3400856F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B415135B28085F3400856F14 /* LaunchScreen.storyboard */; };
+		B415136D280871EF00856F14 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B415136C280871EF00856F14 /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B415135928085F3400856F14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B415135C28085F3400856F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B415135E28085F3400856F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B415136C280871EF00856F14 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationViewController.swift; path = "Efe's Quiz/RegistrationViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,62 @@
 			children = (
 				B415135028085F3200856F14 /* AppDelegate.swift */,
 				B415135228085F3200856F14 /* SceneDelegate.swift */,
-				B415135428085F3200856F14 /* ViewController.swift */,
+				B415136728085F8800856F14 /* Quizes */,
+				B415136428085F3F00856F14 /* Menu */,
+				B415136528085F5B00856F14 /* Registration */,
+				B415136628085F6B00856F14 /* QuizMenu */,
 				B415135628085F3200856F14 /* Main.storyboard */,
 				B415135928085F3400856F14 /* Assets.xcassets */,
 				B415135B28085F3400856F14 /* LaunchScreen.storyboard */,
 				B415135E28085F3400856F14 /* Info.plist */,
 			);
 			path = "Efe's Quiz";
+			sourceTree = "<group>";
+		};
+		B415136428085F3F00856F14 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B415135428085F3200856F14 /* ViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		B415136528085F5B00856F14 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				B415136C280871EF00856F14 /* RegistrationViewController.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		B415136628085F6B00856F14 /* QuizMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B41513682808605E00856F14 /* QuizStarted */,
+			);
+			path = QuizMenu;
+			sourceTree = "<group>";
+		};
+		B415136728085F8800856F14 /* Quizes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Quizes;
+			sourceTree = "<group>";
+		};
+		B41513682808605E00856F14 /* QuizStarted */ = {
+			isa = PBXGroup;
+			children = (
+				B41513692808608100856F14 /* Result */,
+			);
+			path = QuizStarted;
+			sourceTree = "<group>";
+		};
+		B41513692808608100856F14 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +191,7 @@
 			files = (
 				B415135528085F3200856F14 /* ViewController.swift in Sources */,
 				B415135128085F3200856F14 /* AppDelegate.swift in Sources */,
+				B415136D280871EF00856F14 /* RegistrationViewController.swift in Sources */,
 				B415135328085F3200856F14 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
