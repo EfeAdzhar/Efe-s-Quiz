@@ -1,5 +1,6 @@
 # Efe's Quiz
-# The first demo will be ready in 3 days from 14.04.22 So it means on 17.04.22 the first DEMO will be ready. So please wait :)
+# The first demo will be ready in a week from 14.04.22 So it means on 21.04.22 the first DEMO will be ready. So please wait :)
+# P.S: Sorry, my diploma...The date has been moved. Sorry and than you for understanding :)
 ## My Quiz App
 #### Hello there, this is my first serious app. This quiz app will contain Historical, Political, and many other interesting quizzes. 
 #### I love taking quizzes in my free time, so I've thought that it would be a great idea to create my quiz app and also explain how it works so that you can do the same if you wanna) 
