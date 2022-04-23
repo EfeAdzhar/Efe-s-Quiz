@@ -15,9 +15,12 @@
 		B415135D28085F3400856F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B415135B28085F3400856F14 /* LaunchScreen.storyboard */; };
 		B415136D280871EF00856F14 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B415136C280871EF00856F14 /* RegistrationViewController.swift */; };
 		B48200BB2814979300A98255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B48200BA2814979300A98255 /* GoogleService-Info.plist */; };
+		BA9CA99C243E26D0239A7EAB /* Pods_Efe_s_Quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F6D3F4C28C933709E5E64E /* Pods_Efe_s_Quiz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B3A622C16A7C824DD098672 /* Pods-Efe's Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Efe's Quiz.debug.xcconfig"; path = "Target Support Files/Pods-Efe's Quiz/Pods-Efe's Quiz.debug.xcconfig"; sourceTree = "<group>"; };
+		61F6D3F4C28C933709E5E64E /* Pods_Efe_s_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Efe_s_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B415134D28085F3200856F14 /* Efe's Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Efe's Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B415135028085F3200856F14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B415135228085F3200856F14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		B415135E28085F3400856F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B415136C280871EF00856F14 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationViewController.swift; path = "Efe's Quiz/RegistrationViewController.swift"; sourceTree = SOURCE_ROOT; };
 		B48200BA2814979300A98255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D52A751891DFC1F38D0A9241 /* Pods-Efe's Quiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Efe's Quiz.release.xcconfig"; path = "Target Support Files/Pods-Efe's Quiz/Pods-Efe's Quiz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9CA99C243E26D0239A7EAB /* Pods_Efe_s_Quiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188E2A04EEEBF6F85204DA4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B3A622C16A7C824DD098672 /* Pods-Efe's Quiz.debug.xcconfig */,
+				D52A751891DFC1F38D0A9241 /* Pods-Efe's Quiz.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B415134428085F3200856F14 = {
 			isa = PBXGroup;
 			children = (
 				B415134F28085F3200856F14 /* Efe's Quiz */,
 				B415134E28085F3200856F14 /* Products */,
+				188E2A04EEEBF6F85204DA4F /* Pods */,
+				D1E6B1A7FCC5AFF84CB22673 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +138,14 @@
 			path = Result;
 			sourceTree = "<group>";
 		};
+		D1E6B1A7FCC5AFF84CB22673 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61F6D3F4C28C933709E5E64E /* Pods_Efe_s_Quiz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B415136128085F3400856F14 /* Build configuration list for PBXNativeTarget "Efe's Quiz" */;
 			buildPhases = (
+				535F151D4BF6296661AC763C /* [CP] Check Pods Manifest.lock */,
 				B415134928085F3200856F14 /* Sources */,
 				B415134A28085F3200856F14 /* Frameworks */,
 				B415134B28085F3200856F14 /* Resources */,
+				A7477048B47E03A9B0573DEB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,6 +214,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		535F151D4BF6296661AC763C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Efe's Quiz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7477048B47E03A9B0573DEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Efe's Quiz/Pods-Efe's Quiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Efe's Quiz/Pods-Efe's Quiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Efe's Quiz/Pods-Efe's Quiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B415134928085F3200856F14 /* Sources */ = {
@@ -338,6 +407,7 @@
 		};
 		B415136228085F3400856F14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B3A622C16A7C824DD098672 /* Pods-Efe's Quiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -366,6 +436,7 @@
 		};
 		B415136328085F3400856F14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D52A751891DFC1F38D0A9241 /* Pods-Efe's Quiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
