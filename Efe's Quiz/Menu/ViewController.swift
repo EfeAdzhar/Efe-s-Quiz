@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     //MARK: Creating Elements
     //Sing in Button
     func createSignInButton() {
-        signInButton.frame = CGRect(x: 150, y: 700, width: 150, height: 50)
+        signInButton.frame = CGRect(x: 135, y: 700, width: 150, height: 50)
         signInButton.tintColor = UIColor.white
         signInButton.setTitle("Sign in", for: .normal)
         signInButton.backgroundColor = .systemPink

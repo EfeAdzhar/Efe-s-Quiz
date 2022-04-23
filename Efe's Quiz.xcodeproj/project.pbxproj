@@ -14,6 +14,7 @@
 		B415135A28085F3400856F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B415135928085F3400856F14 /* Assets.xcassets */; };
 		B415135D28085F3400856F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B415135B28085F3400856F14 /* LaunchScreen.storyboard */; };
 		B415136D280871EF00856F14 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B415136C280871EF00856F14 /* RegistrationViewController.swift */; };
+		B48200BB2814979300A98255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B48200BA2814979300A98255 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B415135C28085F3400856F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B415135E28085F3400856F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B415136C280871EF00856F14 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationViewController.swift; path = "Efe's Quiz/RegistrationViewController.swift"; sourceTree = SOURCE_ROOT; };
+		B48200BA2814979300A98255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				B415135628085F3200856F14 /* Main.storyboard */,
 				B415135928085F3400856F14 /* Assets.xcassets */,
 				B415135B28085F3400856F14 /* LaunchScreen.storyboard */,
+				B48200BA2814979300A98255 /* GoogleService-Info.plist */,
 				B415135E28085F3400856F14 /* Info.plist */,
 			);
 			path = "Efe's Quiz";
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B415135D28085F3400856F14 /* LaunchScreen.storyboard in Resources */,
+				B48200BB2814979300A98255 /* GoogleService-Info.plist in Resources */,
 				B415135A28085F3400856F14 /* Assets.xcassets in Resources */,
 				B415135828085F3200856F14 /* Main.storyboard in Resources */,
 			);
