@@ -1,5 +1,5 @@
 # Efe's Quiz
-# The first demo will be ready in a week or half from 14.04.22 So it means on 25.04.22 the first DEMO will be ready. So please wait :)
+# The first demo is still in process from 14.04.22. The first DEMO will be ready. I hope it will be sooner then 15th may. I'm sorry for this taking so long but It's my first project I'm writing completly on my own. I only use guides if i don't know anything about the subject. Logics are completly mine. So please wait :)
 # P.S: Sorry, my diploma...The date has been moved. Sorry and than you for understanding :)
 ## My Quiz App
 #### Hello there, this is my first serious app. This quiz app will contain Historical, Political, and many other interesting quizzes. 
@@ -11,3 +11,4 @@
 
 #### Here's what `ViewController` or welcome screen looks like:
 [ViewController](./Photos/ViewControllerForQuizApp.jpeg)
+
