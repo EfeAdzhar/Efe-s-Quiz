@@ -10,17 +10,26 @@ import UIKit
 
 class RegistrationViewController : UIViewController {
     
+    // MARK: viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Title
         self.title = "Sign in"
+        // Delegates
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        loginTextField.delegate = self
+        //SetUps
         backgroundColor()
         setupTextFiledComponents()
         setupButton()
+        //Targets
+        registrationButton.addTarget(self, action: #selector(registrateButtonPressed(sender:)), for: .touchUpInside)
     }
     
     // MARK: Button
     let registrationButton : UIButton = {
-         let registration = UIButton()
+        let registration = UIButton()
         registration.frame = CGRect(x: 130, y: 500, width: 170, height: 50)
         registration.setTitle("Registrate", for: .normal)
         registration.layer.cornerRadius = 15
@@ -29,6 +38,49 @@ class RegistrationViewController : UIViewController {
         registration.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         return registration
     }()
+    
+    // MARK: Registration Button Pressed
+    
+    @objc func registrateButtonPressed(sender : UIButton) {
+        if sender == registrationButton {
+            if passwordTextField.text!.isEmpty && loginTextField.text!.isEmpty && emailTextField.text!.isEmpty {
+                alertForAll()
+            }
+            else if emailTextField.text!.isEmpty && loginTextField.text!.isEmpty {
+                alertForEmailAndLogin()
+            }
+            
+            else if emailTextField.text!.isEmpty && passwordTextField.text!.isEmpty {
+                alertForEmailAndPassword()
+            }
+            
+            else if loginTextField.text!.isEmpty &&  passwordTextField.text!.isEmpty {
+                alertForLoginAndPassword()
+            }
+            
+            else if emailTextField.text!.isEmpty {
+                alertForEmail()
+            }
+            else if loginTextField.text!.isEmpty {
+                alertForLogin()
+            }
+            else if passwordTextField.text!.isEmpty {
+                alertForPassword()
+            }
+            else if !emailTextField.text!.isEmpty {
+                var charArr = [Character]()
+                for i in emailTextField.text! {
+                    charArr.append(i)
+                }
+                if !charArr.contains("@"){
+                    alertForSymbol()
+                }
+            }
+            if !passwordTextField.text!.isEmpty && !loginTextField.text!.isEmpty && !emailTextField.text!.isEmpty {
+                show(QuizMenuViewController(), sender: .none)
+            }
+        }
+    }
     
     let alreadyHaveAccountButton : UIButton = {
         var accountButton = UIButton(type: .system)
@@ -46,6 +98,7 @@ class RegistrationViewController : UIViewController {
         email.leftViewMode = .always
         email.leftView = UIView(frame: CGRect(x:0,y:0,width:2,height:0))
         email.textContentType = .emailAddress
+        email.keyboardType = .emailAddress
         email.layer.cornerRadius = 5
         email.backgroundColor = .black
         email.layer.borderWidth = 2
@@ -60,6 +113,8 @@ class RegistrationViewController : UIViewController {
         password.leftViewMode = .always
         password.leftView = UIView(frame: CGRect(x:0,y:0,width:2,height:0))
         password.textContentType = .password
+        password.keyboardType = .default
+        password.isSecureTextEntry = true
         password.layer.cornerRadius = 5
         password.backgroundColor = .black
         password.layer.borderWidth = 2
@@ -73,7 +128,7 @@ class RegistrationViewController : UIViewController {
         login.attributedPlaceholder = NSAttributedString(string: "login".uppercased(), attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
         login.leftViewMode = .always
         login.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 2, height: 0))
-        login.textContentType = .name
+        login.textContentType = .username
         login.layer.cornerRadius = 5
         login.backgroundColor = .black
         login.layer.borderWidth = 2
@@ -144,18 +199,93 @@ class RegistrationViewController : UIViewController {
         loginTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -24).isActive = true
         loginTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
-    
-    // MARK: Registration Button Pressed
-    
-    func registrateButtonPressed() {
-        
-    }
 }
 
 
-extension RegistrationViewController : UITextViewDelegate {
-    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+// MARK: UIAlert
+extension RegistrationViewController {
+    
+    func alertForEmail() {
+        let alert = UIAlertController(title: "Your Email Bar is Empty!", message: "Please, type your email", preferredStyle: .alert)
+        let alertButtonOk = UIAlertAction(title: "OK", style: .default, handler: .none)
+        alert.addAction(alertButtonOk)
+        self.present(alert, animated: true, completion: .none)
+    }
+    
+    func alertForPassword() {
+        let alert = UIAlertController(title: "Your Password Bar is Empty!", message: "Please, type your password", preferredStyle: .alert)
+        let alertButtonOk = UIAlertAction(title: "OK", style: .default, handler: .none)
+        alert.addAction(alertButtonOk)
+        self.present(alert, animated: true, completion: .none)
+    }
+    
+    func alertForAll() {
+        let alert = UIAlertController(title: "Your Email, Login and Password Bars are Empty!", message: "Please, type your email, login and password", preferredStyle: .alert)
+        let alertButtonOk = UIAlertAction(title: "OK", style: .default, handler: .none)
+        alert.addAction(alertButtonOk)
+        self.present(alert, animated: true, completion: .none)
+        
+    }
+    func alertForSymbol() {
+        let alert = UIAlertController(title: "It's not an email", message: "Please, type your email", preferredStyle: .alert)
+        let alertButtonOk = UIAlertAction(title: "OK", style: .default, handler: .none)
+        alert.addAction(alertButtonOk)
+        self.present(alert, animated: true, completion: .none)
+    }
+    
+    func alertForLogin() {
+        let alert = UIAlertController(title: "Your Login Bar is Empty", message: "Please, type your login", preferredStyle: .alert)
+        let alertButtonOk = UIAlertAction(title: "OK", style: .default, handler: .none)
+        alert.addAction(alertButtonOk)
+        self.present(alert, animated: true, completion: .none)
+    }
+    
+    func alertForEmailAndLogin() {
+        let alert = UIAlertController(title: "Your Email and Login Bars are Empty!", message: "Please, type your email and login", preferredStyle: .alert)
+        let alertButtonOk = UIAlertAction(title: "OK", style: .default, handler: .none)
+        alert.addAction(alertButtonOk)
+        self.present(alert, animated: true, completion: .none)
+    }
+    func alertForEmailAndPassword() {
+        let alert = UIAlertController(title: "Your Email and Password Bars are Empty!", message: "Please, type your email and password", preferredStyle: .alert)
+        let alertButtonOk = UIAlertAction(title: "OK", style: .default, handler: .none)
+        alert.addAction(alertButtonOk)
+        self.present(alert, animated: true, completion: .none)
+    }
+    
+    func   alertForLoginAndPassword() {
+        let alert = UIAlertController(title: "Your Login and Password Bars are Empty!", message: "Please, type your login and password", preferredStyle: .alert)
+        let alertButtonOk = UIAlertAction(title: "OK", style: .default, handler: .none)
+        alert.addAction(alertButtonOk)
+        self.present(alert, animated: true, completion: .none)
+    }
+    
+}
+
+// MARK: Delegate Text
+extension RegistrationViewController : UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         return true
     }
     
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            textField.resignFirstResponder()
+            print("Resined Email")
+        }
+        else if textField == loginTextField {
+            textField.resignFirstResponder()
+            print("Resined Login")
+        }
+        else if textField == passwordTextField {
+            textField.resignFirstResponder()
+            print("Resined Password")
+        }
+        return true
+    }
 }

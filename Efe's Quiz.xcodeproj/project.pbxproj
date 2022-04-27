@@ -14,10 +14,12 @@
 		B415135A28085F3400856F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B415135928085F3400856F14 /* Assets.xcassets */; };
 		B415135D28085F3400856F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B415135B28085F3400856F14 /* LaunchScreen.storyboard */; };
 		B415136D280871EF00856F14 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B415136C280871EF00856F14 /* RegistrationViewController.swift */; };
-		B459F6CB2816FEDA00EC50E8 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B459F6CB2816FEDA00EC50E8 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B462BA262819981600C5174E /* QuizMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462BA252819981600C5174E /* QuizMenuViewController.swift */; };
+		B462BA2C28199F7900C5174E /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = B462BA2B28199F7900C5174E /* SQLite */; settings = {ATTRIBUTES = (Required, ); }; };
 		B48200BB2814979300A98255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B48200BA2814979300A98255 /* GoogleService-Info.plist */; };
-		B48FD8FC2816F278009FCFD1 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B4B55FAA2816FADA00AEE6CF /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B48FD8FC2816F278009FCFD1 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B4B55FAA2816FADA00AEE6CF /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,9 +29,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B459F6CB2816FEDA00EC50E8 /* BuildFile in Embed Frameworks */,
-				B4B55FAA2816FADA00AEE6CF /* BuildFile in Embed Frameworks */,
-				B48FD8FC2816F278009FCFD1 /* BuildFile in Embed Frameworks */,
+				B459F6CB2816FEDA00EC50E8 /* (null) in Embed Frameworks */,
+				B4B55FAA2816FADA00AEE6CF /* (null) in Embed Frameworks */,
+				B48FD8FC2816F278009FCFD1 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +48,7 @@
 		B415135C28085F3400856F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B415135E28085F3400856F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B415136C280871EF00856F14 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationViewController.swift; path = "Efe's Quiz/RegistrationViewController.swift"; sourceTree = SOURCE_ROOT; };
+		B462BA252819981600C5174E /* QuizMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuViewController.swift; sourceTree = "<group>"; };
 		B48200BA2814979300A98255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B48FD8E62816EDA8009FCFD1 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -55,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B462BA2C28199F7900C5174E /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +127,7 @@
 		B415136628085F6B00856F14 /* QuizMenu */ = {
 			isa = PBXGroup;
 			children = (
+				B462BA252819981600C5174E /* QuizMenuViewController.swift */,
 				B41513682808605E00856F14 /* QuizStarted */,
 			);
 			path = QuizMenu;
@@ -176,6 +181,9 @@
 			dependencies = (
 			);
 			name = "Efe's Quiz";
+			packageProductDependencies = (
+				B462BA2B28199F7900C5174E /* SQLite */,
+			);
 			productName = "Efe's Quiz";
 			productReference = B415134D28085F3200856F14 /* Efe's Quiz.app */;
 			productType = "com.apple.product-type.application";
@@ -204,6 +212,9 @@
 				Base,
 			);
 			mainGroup = B415134428085F3200856F14;
+			packageReferences = (
+				B462BA2A28199F7900C5174E /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = B415134E28085F3200856F14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -256,6 +267,7 @@
 				B415135128085F3200856F14 /* AppDelegate.swift in Sources */,
 				B415136D280871EF00856F14 /* RegistrationViewController.swift in Sources */,
 				B415135328085F3200856F14 /* SceneDelegate.swift in Sources */,
+				B462BA262819981600C5174E /* QuizMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +485,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B462BA2A28199F7900C5174E /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B462BA2B28199F7900C5174E /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B462BA2A28199F7900C5174E /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B415134528085F3200856F14 /* Project object */;
 }
