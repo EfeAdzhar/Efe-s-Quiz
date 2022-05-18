@@ -18,6 +18,7 @@
 		B462BA262819981600C5174E /* QuizMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462BA252819981600C5174E /* QuizMenuViewController.swift */; };
 		B462BA2C28199F7900C5174E /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = B462BA2B28199F7900C5174E /* SQLite */; settings = {ATTRIBUTES = (Required, ); }; };
 		B48200BB2814979300A98255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B48200BA2814979300A98255 /* GoogleService-Info.plist */; };
+		B4825DD12828186D003C1C7A /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4825DD02828186D003C1C7A /* QuizList.swift */; };
 		B48FD8FC2816F278009FCFD1 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4B55FAA2816FADA00AEE6CF /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		B415136C280871EF00856F14 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationViewController.swift; path = "Efe's Quiz/RegistrationViewController.swift"; sourceTree = SOURCE_ROOT; };
 		B462BA252819981600C5174E /* QuizMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuViewController.swift; sourceTree = "<group>"; };
 		B48200BA2814979300A98255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B4825DD02828186D003C1C7A /* QuizList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
 		B48FD8E62816EDA8009FCFD1 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				B462BA252819981600C5174E /* QuizMenuViewController.swift */,
+				B4825DD02828186D003C1C7A /* QuizList.swift */,
 				B41513682808605E00856F14 /* QuizStarted */,
 			);
 			path = QuizMenu;
@@ -265,6 +268,7 @@
 			files = (
 				B415135528085F3200856F14 /* ViewController.swift in Sources */,
 				B415135128085F3200856F14 /* AppDelegate.swift in Sources */,
+				B4825DD12828186D003C1C7A /* QuizList.swift in Sources */,
 				B415136D280871EF00856F14 /* RegistrationViewController.swift in Sources */,
 				B415135328085F3200856F14 /* SceneDelegate.swift in Sources */,
 				B462BA262819981600C5174E /* QuizMenuViewController.swift in Sources */,

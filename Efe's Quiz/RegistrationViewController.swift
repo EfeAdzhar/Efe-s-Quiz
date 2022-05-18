@@ -77,7 +77,7 @@ class RegistrationViewController : UIViewController {
                 }
             }
             if !passwordTextField.text!.isEmpty && !loginTextField.text!.isEmpty && !emailTextField.text!.isEmpty {
-                show(QuizMenuViewController(), sender: .none)
+                show(QuizList(), sender: .none)
             }
         }
     }
