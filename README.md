@@ -18,6 +18,6 @@
 #### As i said I'm writing this on my own and just looking for Documentation or videos if I don't know anything about the UI Element. 
 #### I found this great method "register(class:)" so i made cell programmatically without Storyboard which makes me proud of myself. Even though I stole it from Stack Overflow, I study it and I now know how It works. 
 
-### ANN OF CORSE!
+### AND OF CORSE!
 #### The hardest part is now is to make a QUIZ!! SUPRICE!
 #### I have absolutley no idea how i will do it. But at least I will try on my own and then watch some videos of how people have made it so I can understand where I can make it better. 
