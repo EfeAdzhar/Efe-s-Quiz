@@ -15,6 +15,7 @@
 		B415135D28085F3400856F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B415135B28085F3400856F14 /* LaunchScreen.storyboard */; };
 		B415136D280871EF00856F14 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B415136C280871EF00856F14 /* RegistrationViewController.swift */; };
 		B459F6CB2816FEDA00EC50E8 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B45CE88D2836B7060081A27F /* QuizStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CE88C2836B7060081A27F /* QuizStartViewController.swift */; };
 		B462BA262819981600C5174E /* QuizMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462BA252819981600C5174E /* QuizMenuViewController.swift */; };
 		B462BA2C28199F7900C5174E /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = B462BA2B28199F7900C5174E /* SQLite */; settings = {ATTRIBUTES = (Required, ); }; };
 		B48200BB2814979300A98255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B48200BA2814979300A98255 /* GoogleService-Info.plist */; };
@@ -49,6 +50,7 @@
 		B415135C28085F3400856F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B415135E28085F3400856F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B415136C280871EF00856F14 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationViewController.swift; path = "Efe's Quiz/RegistrationViewController.swift"; sourceTree = SOURCE_ROOT; };
+		B45CE88C2836B7060081A27F /* QuizStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStartViewController.swift; sourceTree = "<group>"; };
 		B462BA252819981600C5174E /* QuizMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuViewController.swift; sourceTree = "<group>"; };
 		B48200BA2814979300A98255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4825DD02828186D003C1C7A /* QuizList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		B41513682808605E00856F14 /* QuizStarted */ = {
 			isa = PBXGroup;
 			children = (
+				B45CE88C2836B7060081A27F /* QuizStartViewController.swift */,
 				B41513692808608100856F14 /* Result */,
 			);
 			path = QuizStarted;
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B415135528085F3200856F14 /* ViewController.swift in Sources */,
+				B45CE88D2836B7060081A27F /* QuizStartViewController.swift in Sources */,
 				B415135128085F3200856F14 /* AppDelegate.swift in Sources */,
 				B4825DD12828186D003C1C7A /* QuizList.swift in Sources */,
 				B415136D280871EF00856F14 /* RegistrationViewController.swift in Sources */,

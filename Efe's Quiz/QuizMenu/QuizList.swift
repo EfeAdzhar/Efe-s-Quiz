@@ -52,8 +52,6 @@ var imageArray = ["political_orientation",
         cell.imageView?.image = UIImage(named: imageArray[indexPath.row])
         cell.textLabel?.text = quizArray[indexPath.row]
         cell.textLabel?.numberOfLines = 0
-       
-
         return cell
     }
     
@@ -61,6 +59,14 @@ var imageArray = ["political_orientation",
         return 60
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            show(QuizStartViewController(), sender: .none)
+        }
+        else if indexPath.row == 1 {
+            show(QuizStartViewController(), sender: .none)
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
