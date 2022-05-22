@@ -25,6 +25,7 @@ class RegistrationViewController : UIViewController {
         setupButton()
         //Targets
         registrationButton.addTarget(self, action: #selector(registrateButtonPressed(sender:)), for: .touchUpInside)
+        alreadyHaveAccountButton.addTarget(self, action: #selector(alreadyHaveAccountButtonPressed(sender:)), for: .touchUpInside)
     }
     
     // MARK: Button
@@ -39,7 +40,7 @@ class RegistrationViewController : UIViewController {
         return registration
     }()
     
-    // MARK: Registration Button Pressed
+    // MARK: Registration Button Pressed & Already Have Account Button Pressed
     
     @objc func registrateButtonPressed(sender : UIButton) {
         if sender == registrationButton {
@@ -79,6 +80,13 @@ class RegistrationViewController : UIViewController {
             if !passwordTextField.text!.isEmpty && !loginTextField.text!.isEmpty && !emailTextField.text!.isEmpty {
                 show(QuizList(), sender: .none)
             }
+        }
+    }
+    
+    @objc func alreadyHaveAccountButtonPressed(sender : UIButton) {
+        if sender == alreadyHaveAccountButton {
+            show(QuizList(), sender: .none)
+            // It will be like this for now, cause It's just a test app and I need a quick access
         }
     }
     

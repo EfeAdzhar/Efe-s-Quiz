@@ -14,17 +14,14 @@ var imageArray = ["political_orientation",
                   "history_knowledge"]
     var quizArray = ["What is your political orientation?",
                      "Historical Knowledge"]
+    var descriptionArray =
+            ["If you're interested in politics but still you don't know on what side you are, then this quiz is for you!",
+            "Knowing History is really important. It's not only interesting but also it helps us to not forget the lessons of the past, but do you know it well? Test youreself with this quiz!"]
 
     override func viewDidLoad() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Quiz")
         super.viewDidLoad()
         backgroundColor()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -60,12 +57,13 @@ var imageArray = ["political_orientation",
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            show(QuizStartViewController(), sender: .none)
-        }
-        else if indexPath.row == 1 {
-            show(QuizStartViewController(), sender: .none)
-        }
+        tableView.deselectRow(at: indexPath, animated: true)
+        let quizes = quizArray[indexPath.row]
+        let images = UIImage(named: imageArray[indexPath.row])!
+        let descriptions = descriptionArray[indexPath.row]
+        let vc = QuizStartViewController(quiz: quizes, image: images, descriptions: descriptions)
+        self.present(UINavigationController(rootViewController: vc), animated: true)
+        
     }
     /*
     // Override to support conditional editing of the table view.
