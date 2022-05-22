@@ -46,7 +46,7 @@ var imageArray = ["political_orientation",
         self.tableView.layer.addSublayer(layer)
     }
     
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Quiz", for: indexPath)
         cell.imageView?.image = UIImage(named: imageArray[indexPath.row])
