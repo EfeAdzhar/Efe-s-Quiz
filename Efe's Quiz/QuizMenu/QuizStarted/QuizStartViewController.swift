@@ -14,6 +14,7 @@ class QuizStartViewController: UIViewController {
     let quiz : String
     var image : UIImage
     var descriptions : String
+    let startButtonImage = UIImage(named: "start_button")
     
     init(quiz : String, image : UIImage, descriptions : String) {
         self.image = image
@@ -37,7 +38,7 @@ class QuizStartViewController: UIViewController {
         backgroundView()
         quizImage()
         descriptionsLabels()
-        
+        setupStartButton()
     }
     
     func backgroundView() {
@@ -58,7 +59,7 @@ class QuizStartViewController: UIViewController {
         
     }
     func descriptionsLabels() {
-        descriptionsLabel.frame = CGRect(x: 20, y: 400, width: 400, height: 200)
+        descriptionsLabel.frame = CGRect(x: 20, y: 400, width: 400, height: 300)
         descriptionsLabel.font = UIFont.boldSystemFont(ofSize: 30)
         descriptionsLabel.textColor = .white
         descriptionsLabel.numberOfLines = -1
@@ -67,4 +68,26 @@ class QuizStartViewController: UIViewController {
         self.view.addSubview(descriptionsLabel)
     }
     
+    var startButton : UIButton = {
+        var startButton = UIButton()
+        startButton.layer.borderWidth = 3
+        startButton.layer.borderColor = UIColor.black.cgColor
+        startButton.layer.cornerRadius = 15
+        return startButton
+    }()
+    
+    func setupStartButton() {
+        self.view.addSubview(startButton)
+        
+        startButton.setImage(startButtonImage, for: .normal)
+        startButton.imageView?.layer.masksToBounds = true
+        startButton.imageView?.layer.borderWidth = 3
+        startButton.imageView?.layer.borderColor = UIColor.black.cgColor
+        startButton.imageView?.layer.cornerRadius = 15
+        startButton.translatesAutoresizingMaskIntoConstraints = false
+        startButton.topAnchor.constraint(equalTo: descriptionsLabel.bottomAnchor, constant: 10).isActive = true
+        startButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 80).isActive = true
+        startButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -80).isActive = true
+        startButton.heightAnchor.constraint(equalToConstant: 70).isActive = true
+    }
 }
