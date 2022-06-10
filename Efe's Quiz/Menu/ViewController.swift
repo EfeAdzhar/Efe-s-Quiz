@@ -8,7 +8,7 @@ import UIKit
 //MARK: ViewController
 class ViewController: UIViewController {
     //MARK: Elements
-    let signInButton = UIButton()
+    @IBOutlet weak var signInButton: UIButton!
     let welcomeLabel = UILabel()
     //MARK: ViewDidLoad
     override func viewDidLoad() {
@@ -17,22 +17,21 @@ class ViewController: UIViewController {
         backgroundView()
         createSignInButton()
         creatingTextLabel()
-        signInButton.addTarget(self, action: #selector(signInButtonPressed(sender:)), for: .touchUpInside)
     }
     
     //MARK: Creating Elements
     //Sing in Button
     func createSignInButton() {
-        signInButton.frame = CGRect(x: 135, y: 700, width: 150, height: 50)
         signInButton.tintColor = UIColor.white
         signInButton.setTitle("Sign in", for: .normal)
         signInButton.backgroundColor = .systemPink
         signInButton.layer.cornerRadius = 15
         signInButton.layer.borderWidth = 3
         signInButton.layer.borderColor = UIColor.black.cgColor
-        signInButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        signInButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 320)
         self.view.addSubview(signInButton)
     }
+    
     //Label
     func creatingTextLabel() {
         welcomeLabel.frame = CGRect(x: 0, y: 0, width: 350, height: 200)
@@ -56,7 +55,7 @@ class ViewController: UIViewController {
     //MARK: Go To Registration ViewController
     @objc func signInButtonPressed(sender : UIButton) {
         if sender == self.signInButton {
-            show(RegistrationViewController(), sender: .none)
+            self.performSegue(withIdentifier: "signInSeque", sender: .none)
         }
     }
 }

@@ -9,7 +9,6 @@ import UIKit
 
 class QuizList: UITableViewController {
     
-
 var imageArray = ["political_orientation",
                   "history_knowledge"]
     var quizArray = ["What is your political orientation?",
