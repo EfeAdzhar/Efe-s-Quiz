@@ -9,7 +9,9 @@ import UIKit
 
 class StartViewController: UIViewController {
 var arrayTest = ["Walter", "White", "Alexsis", "Heisenberg"]
+var arrayTest2 = ["2", "1", "4", "5"]
    lazy var integer = 0
+    var rightAnswear = false
     var label = UILabel()
     var counterLabel = UILabel()
     var tableView =  UITableView()
@@ -70,15 +72,23 @@ var arrayTest = ["Walter", "White", "Alexsis", "Heisenberg"]
 extension StartViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayTest.count
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "answers", for: indexPath)
-//        var content = cell.defaultContentConfiguration()
-//        content.text = arrayTest[indexPath.row]
-//        cell.contentConfiguration = content
-        cell.textLabel?.text = arrayTest[indexPath.row]
+        
+        cell.textLabel?.text = {
+        switch rightAnswear {
+        case true:
+            cell.textLabel?.text = arrayTest2[indexPath.row]
+            cell.reloadInputViews()
+        default:
+            cell.textLabel?.text = arrayTest[indexPath.row]
+        }
+            return cell.textLabel?.text
+        }()
         return cell
         
     }
@@ -103,6 +113,7 @@ extension StartViewController : UITableViewDelegate, UITableViewDataSource {
                 }
         if indexPath.row == 3 {
             integer += 1
+            rightAnswear = true
             count.text = String(integer)
         }
         else if indexPath.row != 3 {
@@ -114,7 +125,11 @@ extension StartViewController : UITableViewDelegate, UITableViewDataSource {
                 
             }
         }
-        }
+        
+//        if rightAnswear == true {
+//            cell.textLabel?.text = arrayTest2[indexPath.row]
+//        }
+    }
 }
 
 
