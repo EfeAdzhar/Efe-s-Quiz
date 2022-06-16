@@ -105,11 +105,16 @@ extension StartViewController : UITableViewDelegate, UITableViewDataSource {
             integer += 1
             count.text = String(integer)
         }
-        else {
+        else if indexPath.row != 3 {
             integer -= 1
             count.text = String(integer)
-        }
-        }
+            if integer < 0 {
+                self.count.text = "Game Over"
+                self.tableView.isHidden = true
+                
             }
+        }
+        }
+}
 
 
