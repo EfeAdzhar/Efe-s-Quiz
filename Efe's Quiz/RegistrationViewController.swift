@@ -10,10 +10,11 @@ import UIKit
 
 class RegistrationViewController : UIViewController {
     
+    @IBOutlet weak var registrationButton: UIButton!
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    lazy var arrayOfTextFields = [UITextField?]()
+
     
     // MARK: viewDidLoad()
     override func viewDidLoad() {
@@ -21,9 +22,10 @@ class RegistrationViewController : UIViewController {
         //Title
         self.title = "Sign in"
         //Func
-        buttonEdit(loginTextField)
-        buttonEdit(emailTextField)
-        buttonEdit(passwordTextField)
+        createEmailTextField()
+        createPasswordTextField()
+        createLoginTextField()
+        createRegistrationButton()
         // Delegates
         emailTextField.delegate = self
         passwordTextField.delegate = self
@@ -37,16 +39,17 @@ class RegistrationViewController : UIViewController {
     }
     
     // MARK: Button
-    let registrationButton : UIButton = {
-        let registration = UIButton()
-        registration.frame = CGRect(x: 130, y: 500, width: 170, height: 50)
-        registration.setTitle("Registrate", for: .normal)
-        registration.layer.cornerRadius = 15
-        registration.layer.borderWidth = 3
-        registration.layer.borderColor = UIColor.black.cgColor
-        registration.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        return registration
-    }()
+    func createRegistrationButton() {
+        registrationButton.frame = CGRect(x: 130, y: 500, width: 170, height: 50)
+        registrationButton.backgroundColor = .systemPink
+        registrationButton.setTitleColor(.white, for: .normal)
+        registrationButton.setTitle("Registrate", for: .normal)
+        registrationButton.layer.cornerRadius = 15
+        registrationButton.layer.borderWidth = 3
+        registrationButton.layer.borderColor = UIColor.black.cgColor
+        registrationButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        self.view.addSubview(registrationButton)
+    }
     
     // MARK: Registration Button Pressed & Already Have Account Button Pressed
     
@@ -109,78 +112,46 @@ class RegistrationViewController : UIViewController {
     }()
     
     // MARK: TextFields
-//    func createEmailTextField() {
-//        emailTextField.leftViewMode = .always
-//        emailTextField.leftView = UIView(frame: CGRect(x:0,y:0,width:2,height:0))
-//        emailTextField.textContentType = .emailAddress
-//        emailTextField.keyboardType = .emailAddress
-//        emailTextField.layer.cornerRadius = 5
-//        emailTextField.backgroundColor = .black
-//        emailTextField.layer.borderWidth = 2
-//        emailTextField.layer.borderColor = UIColor.black.cgColor
-//        emailTextField.font = UIFont.boldSystemFont(ofSize: 13)
-//        self.view.addSubview(emailTextField)
-//    }
-//
-//    func createPasswordTextField() {
-//        passwordTextField.leftViewMode = .always
-//        passwordTextField.leftView = UIView(frame: CGRect(x:0,y:0,width:2,height:0))
-//        passwordTextField.textContentType = .password
-//        passwordTextField.keyboardType = .default
-//        passwordTextField.isSecureTextEntry = true
-//        passwordTextField.layer.cornerRadius = 5
-//        passwordTextField.backgroundColor = .black
-//        passwordTextField.layer.borderWidth = 2
-//        passwordTextField.layer.borderColor = UIColor.black.cgColor
-//        passwordTextField.font = UIFont.boldSystemFont(ofSize: 13)
-//        self.view.addSubview(passwordTextField)
-//    }
-    
-    @IBAction func buttonEdit(_ sender: UITextField) {
-        
-        for _ in arrayOfTextFields {
-            arrayOfTextFields.append(emailTextField)
-            arrayOfTextFields.append(loginTextField)
-            arrayOfTextFields.append(passwordTextField)
-        }
-        for senders in arrayOfTextFields {
-            if sender == senders {
-        sender.leftViewMode = .always
-        sender.leftView = UIView(frame: CGRect(x:0,y:0,width:2,height:0))
-        sender.layer.cornerRadius = 5
-        sender.backgroundColor = .black
-        sender.layer.borderWidth = 2
-        sender.layer.borderColor = UIColor.black.cgColor
-        sender.font = UIFont.boldSystemFont(ofSize: 13)
-        if sender == emailTextField {
-            sender.textContentType = .emailAddress
-            sender.keyboardType = .emailAddress
-        }
-       else if sender == passwordTextField {
-            sender.textContentType = .password
-            sender.keyboardType = .default
-            sender.isSecureTextEntry = true
-        }
-       else if sender == loginTextField {
-            sender.textContentType = .username
-            sender.keyboardType = .default
-        }
+    func createEmailTextField() {
+        emailTextField.leftViewMode = .always
+        emailTextField.leftView = UIView(frame: CGRect(x:0,y:0,width:2,height:0))
+        emailTextField.textContentType = .emailAddress
+        emailTextField.keyboardType = .emailAddress
+        emailTextField.layer.cornerRadius = 5
+        emailTextField.backgroundColor = .black
+        emailTextField.layer.borderWidth = 2
+        emailTextField.layer.borderColor = UIColor.black.cgColor
+        emailTextField.font = UIFont.boldSystemFont(ofSize: 13)
+        self.view.addSubview(emailTextField)
     }
-        }
-        self.view.addSubview(sender)
+
+    func createPasswordTextField() {
+        passwordTextField.leftViewMode = .always
+        passwordTextField.leftView = UIView(frame: CGRect(x:0,y:0,width:2,height:0))
+        passwordTextField.textContentType = .password
+        passwordTextField.keyboardType = .default
+        passwordTextField.isSecureTextEntry = true
+        passwordTextField.layer.cornerRadius = 5
+        passwordTextField.backgroundColor = .black
+        passwordTextField.layer.borderWidth = 2
+        passwordTextField.layer.borderColor = UIColor.black.cgColor
+        passwordTextField.font = UIFont.boldSystemFont(ofSize: 13)
+        self.view.addSubview(passwordTextField)
     }
     
-//    func createLoginTextField() {
-//    loginTextField.leftViewMode = .always
-//    loginTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 2, height: 0))
-//    loginTextField.textContentType = .username
-//    loginTextField.layer.cornerRadius = 5
-//    loginTextField.backgroundColor = .black
-//    loginTextField.layer.borderWidth = 2
-//    loginTextField.layer.borderColor = UIColor.black.cgColor
-//    loginTextField.font = UIFont.boldSystemFont(ofSize: 13)
-//        self.view.addSubview(loginTextField)
-//    }
+    
+    func createLoginTextField() {
+    loginTextField.leftViewMode = .always
+    loginTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 2, height: 0))
+    loginTextField.textContentType = .username
+    loginTextField.layer.cornerRadius = 5
+    loginTextField.backgroundColor = .black
+    loginTextField.layer.borderWidth = 2
+    loginTextField.layer.borderColor = UIColor.black.cgColor
+    loginTextField.font = UIFont.boldSystemFont(ofSize: 13)
+        self.view.addSubview(loginTextField)
+    }
+    
     // MARK: Background color of View
     func backgroundColor() {
         let layer = CAGradientLayer()

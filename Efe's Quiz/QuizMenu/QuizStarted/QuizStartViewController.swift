@@ -31,7 +31,9 @@ class QuizStartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupQuizStartView()
+        startButton.addTarget(self, action: #selector(startButtonPressed(sender:)), for: .touchUpInside)
     }
+    
     
     
     func setupQuizStartView() {
@@ -90,4 +92,8 @@ class QuizStartViewController: UIViewController {
         startButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -80).isActive = true
         startButton.heightAnchor.constraint(equalToConstant: 70).isActive = true
     }
+    
+    @objc func startButtonPressed(sender : UIButton) {
+            self.present(UINavigationController(rootViewController: StartViewController()), animated: true)
+  }
 }

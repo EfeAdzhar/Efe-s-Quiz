@@ -28,7 +28,6 @@ class ViewController: UIViewController {
         signInButton.layer.cornerRadius = 15
         signInButton.layer.borderWidth = 3
         signInButton.layer.borderColor = UIColor.black.cgColor
-        signInButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 320)
         self.view.addSubview(signInButton)
     }
     
