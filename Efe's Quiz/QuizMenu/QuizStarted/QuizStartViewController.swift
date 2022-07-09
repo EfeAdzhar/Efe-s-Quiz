@@ -1,12 +1,8 @@
-//
 //  QuizStartViewController.swift
 //  Efe's Quiz
-//
 //  Created by Efe on 19.05.2022.
-//
 
 import UIKit
-
 
 class QuizStartViewController: UIViewController {
     var descriptionsLabel = UILabel()
@@ -34,8 +30,6 @@ class QuizStartViewController: UIViewController {
         startButton.addTarget(self, action: #selector(startButtonPressed(sender:)), for: .touchUpInside)
     }
     
-    
-    
     func setupQuizStartView() {
         backgroundView()
         quizImage()
@@ -49,8 +43,8 @@ class QuizStartViewController: UIViewController {
         layer.colors = [UIColor.systemRed.cgColor, UIColor.systemGray.cgColor, UIColor.systemPink.cgColor]
         self.view.layer.addSublayer(layer)
         self.title = quiz.uppercased()
-    
         }
+    
     func quizImage() {
         imageView.image = image
         imageView.frame = CGRect(x: 6, y: 100, width: 403, height: 300)
@@ -58,8 +52,8 @@ class QuizStartViewController: UIViewController {
         imageView.layer.borderWidth = 5
         imageView.layer.borderColor = UIColor.black.cgColor
         self.view.addSubview(imageView)
-        
     }
+    
     func descriptionsLabels() {
         descriptionsLabel.frame = CGRect(x: 20, y: 400, width: 400, height: 300)
         descriptionsLabel.font = UIFont.boldSystemFont(ofSize: 30)

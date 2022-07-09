@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,30 +37,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4G-5b-kri">
-                                <rect key="frame" x="124" y="694" width="181" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhR-My-DXz">
+                                <rect key="frame" x="151" y="703" width="126" height="58"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Button">
-                                            <attributes>
-                                                <font key="NSFont" size="24" name="Helvetica-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="HWE-yv-Nlv" kind="show" identifier="signInSeque" id="4b2-1c-Uho"/>
+                                    <action selector="pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wFy-su-hGf"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uhR-My-DXz" secondAttribute="bottom" constant="131" id="8Bt-B0-vAf"/>
+                            <constraint firstItem="uhR-My-DXz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="E4S-K4-Uya"/>
+                            <constraint firstItem="uhR-My-DXz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="151" id="ZuK-Bu-C25"/>
+                            <constraint firstItem="uhR-My-DXz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="563" id="qsS-2u-fgc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4aB-HJ-ec8"/>
                     <connections>
-                        <outlet property="signInButton" destination="f4G-5b-kri" id="ANM-av-GHe"/>
+                        <outlet property="signInButton" destination="uhR-My-DXz" id="79o-hk-QaQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -69,7 +67,7 @@
         <!--Registration View Controller-->
         <scene sceneID="ux4-IS-gfr">
             <objects>
-                <viewController id="HWE-yv-Nlv" customClass="RegistrationViewController" customModule="Efe_s_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HWE-yv-Nlv" customClass="RegistrationViewController" customModule="Efe_s_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oz7-mG-Sd4">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,24 +95,44 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="registrateButtonPressed:" destination="HWE-yv-Nlv" eventType="touchUpInside" id="0K5-ZU-gIA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCc-Ng-nSJ">
+                                <rect key="frame" x="180" y="795" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="alreadyHaveAccountButton:" destination="HWE-yv-Nlv" eventType="touchUpInside" id="DW3-sf-sGy"/>
+                                    <action selector="alreadyHaveAccountButtonPressed:" destination="HWE-yv-Nlv" eventType="touchUpInside" id="Upb-wz-HIu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sCk-tR-RhL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="jCc-Ng-nSJ" firstAttribute="centerX" secondItem="oz7-mG-Sd4" secondAttribute="centerX" id="8Cx-2o-ppe"/>
+                            <constraint firstItem="sCk-tR-RhL" firstAttribute="bottom" secondItem="jCc-Ng-nSJ" secondAttribute="bottom" constant="66" id="Nda-9I-BLq"/>
+                            <constraint firstItem="jCc-Ng-nSJ" firstAttribute="leading" secondItem="sCk-tR-RhL" secondAttribute="leading" constant="180" id="uXl-TN-WH3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZmZ-ZN-Azy"/>
                     <connections>
-                        <outlet property="emailTextField" destination="1VD-ey-cu4" id="X5c-Dj-g4a"/>
-                        <outlet property="loginTextField" destination="2jn-49-UF0" id="Geh-1k-Ts5"/>
-                        <outlet property="passwordTextField" destination="FEf-sG-ewf" id="feZ-aZ-bMg"/>
-                        <outlet property="registrationButton" destination="FpM-JX-oA5" id="9od-z3-j5P"/>
+                        <outlet property="alreadyHaveAccountButton" destination="jCc-Ng-nSJ" id="qet-gc-fbK"/>
+                        <outlet property="emailTextField" destination="1VD-ey-cu4" id="3z4-vd-ntL"/>
+                        <outlet property="loginTextField" destination="2jn-49-UF0" id="IVc-hp-syb"/>
+                        <outlet property="passwordTextField" destination="FEf-sG-ewf" id="bDo-sG-zk6"/>
+                        <outlet property="registrationButton" destination="FpM-JX-oA5" id="xuQ-h1-fSk"/>
+                        <outletCollection property="outlets" destination="1VD-ey-cu4" collectionClass="NSMutableArray" id="dn4-RQ-aY3"/>
+                        <outletCollection property="outlets" destination="FEf-sG-ewf" collectionClass="NSMutableArray" id="7Mj-89-RIe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2jp-Uj-PYz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="810.28037383177571" y="97.840172786177106"/>
         </scene>
-        <!--Quiz List-->
+        <!--List-->
         <scene sceneID="xDp-fb-vqK">
             <objects>
                 <tableViewController id="HVI-sA-oCL" customClass="QuizList" customModule="Efe_s_Quiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,10 +155,46 @@
                             <outlet property="delegate" destination="HVI-sA-oCL" id="4YW-am-8zg"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="List" id="6qj-UT-HYl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTZ-4j-dDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="98"/>
+            <point key="canvasLocation" x="1738" y="98"/>
+        </scene>
+        <!--Icons-->
+        <scene sceneID="EPO-Vy-ZZK">
+            <objects>
+                <collectionViewController id="obi-fj-G5X" customClass="QuizCollectionViewController" customModule="Efe_s_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="pRx-Cu-Pzc">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="psL-mu-2tz">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Vay-vr-agn">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TK9-qI-SsJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="obi-fj-G5X" id="GBX-aq-0uF"/>
+                            <outlet property="delegate" destination="obi-fj-G5X" id="mdB-Up-uCU"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Icons" id="7yo-oJ-F8e"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Z2-MM-UkY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2512" y="98"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="Kn5-qG-T3S">
@@ -151,8 +205,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SAb-NC-XNe">
-                                <rect key="frame" x="20" y="430" width="388" height="462"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="20" y="430" width="388" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -165,12 +219,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtZ-C2-l2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2389" y="97"/>
+            <point key="canvasLocation" x="3351.8691588785045" y="97.840172786177106"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

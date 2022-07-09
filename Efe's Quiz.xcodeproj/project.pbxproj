@@ -20,6 +20,7 @@
 		B48200BB2814979300A98255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B48200BA2814979300A98255 /* GoogleService-Info.plist */; };
 		B4825DD12828186D003C1C7A /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4825DD02828186D003C1C7A /* QuizList.swift */; };
 		B48FD8FC2816F278009FCFD1 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B4ADA56D285E3017007215E9 /* QuizCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA56C285E3017007215E9 /* QuizCollectionViewController.swift */; };
 		B4B55FAA2816FADA00AEE6CF /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4E64C1A285B546C0020DA82 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E64C19285B546C0020DA82 /* StartViewController.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		B48200BA2814979300A98255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4825DD02828186D003C1C7A /* QuizList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
 		B48FD8E62816EDA8009FCFD1 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4ADA56C285E3017007215E9 /* QuizCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCollectionViewController.swift; sourceTree = "<group>"; };
 		B4E64C19285B546C0020DA82 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B4825DD02828186D003C1C7A /* QuizList.swift */,
+				B4ADA56C285E3017007215E9 /* QuizCollectionViewController.swift */,
 				B41513682808605E00856F14 /* QuizStarted */,
 			);
 			path = QuizMenu;
@@ -274,6 +277,7 @@
 				B45CE88D2836B7060081A27F /* QuizStartViewController.swift in Sources */,
 				B415135128085F3200856F14 /* AppDelegate.swift in Sources */,
 				B4825DD12828186D003C1C7A /* QuizList.swift in Sources */,
+				B4ADA56D285E3017007215E9 /* QuizCollectionViewController.swift in Sources */,
 				B415136D280871EF00856F14 /* RegistrationViewController.swift in Sources */,
 				B415135328085F3200856F14 /* SceneDelegate.swift in Sources */,
 			);

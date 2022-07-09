@@ -14,23 +14,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Welcome"
-        backgroundView()
         createSignInButton()
         creatingTextLabel()
+        backgroundView()
     }
     
     //MARK: Creating Elements
     //Sing in Button
     func createSignInButton() {
-        signInButton.tintColor = UIColor.white
-        signInButton.setTitle("Sign in", for: .normal)
-        signInButton.backgroundColor = .systemPink
         signInButton.layer.cornerRadius = 15
         signInButton.layer.borderWidth = 3
         signInButton.layer.borderColor = UIColor.black.cgColor
-        self.view.addSubview(signInButton)
+        signInButton.titleLabel?.font = .boldSystemFont(ofSize: 30)
+        signInButton.tintColor = .black
+        signInButton.setTitle("Start", for: .normal)
+        signInButton.backgroundColor = .systemBlue
     }
-    
+
     //Label
     func creatingTextLabel() {
         welcomeLabel.frame = CGRect(x: 0, y: 0, width: 350, height: 200)
@@ -48,13 +48,16 @@ class ViewController: UIViewController {
         let layer = CAGradientLayer()
         layer.frame = self.view.bounds
         layer.colors = [UIColor.systemRed.cgColor, UIColor.systemGray.cgColor, UIColor.systemPink.cgColor]
-        self.view.layer.addSublayer(layer)
+        self.view.layer.insertSublayer(layer, at: 0)
     }
     
     //MARK: Go To Registration ViewController
-    @objc func signInButtonPressed(sender : UIButton) {
-        if sender == self.signInButton {
-            self.performSegue(withIdentifier: "signInSeque", sender: .none)
+    
+    @IBAction func pressed(_ sender: Any) {
+       
+        show(QuizList(), sender: .none)
+        
         }
     }
-}
+
+
