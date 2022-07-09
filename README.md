@@ -21,3 +21,5 @@
 ### AND OF CORSE!
 #### The hardest part is now is to make a QUIZ!! SUPRICE!
 #### I have absolutley no idea how i will do it. But at least I will try on my own and then watch some videos of how people have made it so I can understand where I can make it better. 
+
+### I wanna to apologize for not finishing it in time. I lost my programming logic skills and I couldn't make the Quiz on my own. I have to copy it from "iOS Academy" YouTube chanel. It really breaks my heart cause I really wanted this to be my first OWN project. But i couldn't and I don't know what to do...
